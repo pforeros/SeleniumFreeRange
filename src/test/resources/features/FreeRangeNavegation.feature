@@ -26,7 +26,7 @@ Feature: Navigation bar
 
  @Plans @Courses
  Scenario: Users can select a plan when signing up
- //   Given I navigate to www.freerangetesters.com
+ //  Given I navigate to www.freerangetesters.com
     When The client selects Elegir Plan
     Then The client can validate the options in the checkout page
 
