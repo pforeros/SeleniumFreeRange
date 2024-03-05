@@ -2,6 +2,7 @@ package pages;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+//import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -85,4 +88,16 @@ public class BasePage {
 
         return dropdownOptions.size();
     }
+    public List<String> getDropdownValues(String locator){
+        Select dropdown = new Select(Find(locator));
+        
+        List<WebElement> dropdownOptions = dropdown.getOptions();
+        List<String> values = new ArrayList<>();
+        //for (WebElement option : drowpdownOptions){
+        for (WebElement option : dropdownOptions) {
+            values.add(option.getText());
+        }
+        return values;
+    }
 }
+
