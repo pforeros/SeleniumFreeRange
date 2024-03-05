@@ -4,6 +4,23 @@
     "cucumberautocomplete.strictGherkinCompletion": true,
     "cucumberautocomplete.strictGherkinValidation": true,
  
+    "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And)\\(",
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": true,
+    "cucumberautocomplete.skipDocStringsFormat": true,
+    "cucumberautocomplete.formatConfOverride": {
+        "And": 3,
+        "But": "relative",
+    },
+    "cucumberautocomplete.onTypeFormat": true,
+    "cucumberautocomplete.customParameters": [
+        {
+            "parameter":"$",
+            "value":"\\$"
+        }
+    ],
+
+
  
     "java.compile.nullAnalysis.mode": "disabled",
     "java.configuration.updateBuildConfiguration": "interactive"
